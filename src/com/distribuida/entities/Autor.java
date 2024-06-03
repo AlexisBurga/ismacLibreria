@@ -1,8 +1,12 @@
 package com.distribuida.entities;
 
+<<<<<<< HEAD
 import org.springframework.stereotype.Component;
 
 @Component
+=======
+
+>>>>>>> branch 'master' of https://github.com/AlexisBurga/ismacLibreria.git
 public class Autor {
 	//Atributos
 	private int idAutor;

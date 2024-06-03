@@ -1,7 +1,10 @@
 package com.distribuida.entities;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/AlexisBurga/ismacLibreria.git
 public class Cliente {
 	
 	//Atributos
