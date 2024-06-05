@@ -1,15 +1,27 @@
 package com.distribuida.entities;
 
-<<<<<<< HEAD
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import org.hibernate.annotations.Columns;
 import org.springframework.stereotype.Component;
 
 @Component
-=======
->>>>>>> branch 'master' of https://github.com/AlexisBurga/ismacLibreria.git
+@Entity
+@Table(name = "categoria")
 public class Categoria {
- //atributos
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//Atributos
+	@Column(name = "id_categoria")
 	private int idCategoria;
+	@Column(name = "categoria")
 	private String categoria;
+	@Column(name = "descripcion")
 	private String descripcion;
 	
 	public Categoria() {}
@@ -36,6 +48,11 @@ public class Categoria {
 	}
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
+	}
+	@Override
+	public String toString() {
+		return "Categoria [idCategoria=" + idCategoria + ", categoria=" + categoria + ", descripcion=" + descripcion
+				+ "]";
 	}
 	
 	

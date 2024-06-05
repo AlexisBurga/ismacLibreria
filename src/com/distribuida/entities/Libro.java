@@ -2,11 +2,10 @@ package com.distribuida.entities;
 
 import java.util.Date;
 
-<<<<<<< HEAD
+
 import org.springframework.stereotype.Component;
 @Component
-=======
->>>>>>> branch 'master' of https://github.com/AlexisBurga/ismacLibreria.git
+
 public class Libro {
 	
 	private int idLibro;
