@@ -10,18 +10,13 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Columns;
 import org.springframework.stereotype.Component;
 
-@Component
-@Entity
-@Table(name = "categoria")
+
 public class Categoria {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	//Atributos
-	@Column(name = "id_categoria")
+
 	private int idCategoria;
-	@Column(name = "categoria")
+
 	private String categoria;
-	@Column(name = "descripcion")
+
 	private String descripcion;
 	
 	public Categoria() {}
