@@ -2,26 +2,55 @@ package com.distribuida.entities;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 @Component
-
+@Entity
+@Table(name="cliente")
 public class Libro {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
+	@Column(name = "id_libro")
 	private int idLibro;
+	@Column(name = "titulo")
 	private String titulo;
+	@Column(name = "editorial")
 	private String editorial;
+	@Column(name = "num_paginas")
 	private int num_paginas;
+	@Column(name = "edicion")
 	private String edicion;
+	@Column(name = "idioma")
 	private String idioma;
+	@Column(name = "fecha_publicacion")
 	private Date fecha_publicacion;
+	@Column(name = "descripcion")
 	private String descripcion;
+	@Column(name = "tipo_pasta")
 	private String tipo_pasta;
+	@Column(name = "isbn")
 	private String ISBN;
+	@Column(name = "num_ejemplares")
 	private int num_ejemplares;
+	@Column(name = "portada")
 	private String portada;
+	@Column(name = "presentacion")
 	private String presentacion;
+	@Column(name = "precio")
 	private double precio;
+	@JoinColumn(name = "id_categoria")
+	@JoinColumn(name = "id_autor")
+	@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	private Categoria idCategoria;
 	private Autor idAutor;
 	
@@ -130,16 +159,16 @@ public class Libro {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
-
-	
 	@Override
 	public String toString() {
 		return "Libro [idLibro=" + idLibro + ", titulo=" + titulo + ", editorial=" + editorial + ", num_paginas="
 				+ num_paginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fecha_publicacion="
 				+ fecha_publicacion + ", descripcion=" + descripcion + ", tipo_pasta=" + tipo_pasta + ", ISBN=" + ISBN
 				+ ", num_ejemplares=" + num_ejemplares + ", portada=" + portada + ", presentacion=" + presentacion
-				+ ", precio=" + precio +"]";
+				+ ", precio=" + precio + ", idCategoria=" + idCategoria + ", idAutor=" + idAutor + "]";
 	}
+
+	
 	
 
 }
