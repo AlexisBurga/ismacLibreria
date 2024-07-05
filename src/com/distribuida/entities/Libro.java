@@ -159,6 +159,19 @@ public class Libro {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
+	
+	public Categoria getIdCategoria() {
+		return idCategoria;
+	}
+	public void setIdCategoria(Categoria idCategoria) {
+		this.idCategoria = idCategoria;
+	}
+	public Autor getIdAutor() {
+		return idAutor;
+	}
+	public void setIdAutor(Autor idAutor) {
+		this.idAutor = idAutor;
+	}
 	@Override
 	public String toString() {
 		return "Libro [idLibro=" + idLibro + ", titulo=" + titulo + ", editorial=" + editorial + ", num_paginas="
@@ -167,6 +180,7 @@ public class Libro {
 				+ ", num_ejemplares=" + num_ejemplares + ", portada=" + portada + ", presentacion=" + presentacion
 				+ ", precio=" + precio + ", idCategoria=" + idCategoria + ", idAutor=" + idAutor + "]";
 	}
+
 
 	
 	
