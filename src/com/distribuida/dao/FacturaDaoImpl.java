@@ -14,10 +14,6 @@ import com.distribuida.entities.Factura;
 
 
 
- 
- 
- 
-@Repository
 public class FacturaDaoImpl implements FacturaDao {
 	@Autowired
 	private SessionFactory  sessionFactory ;
@@ -61,6 +57,12 @@ public class FacturaDaoImpl implements FacturaDao {
 		Session session = sessionFactory.getCurrentSession();
 		session.delete(findOne(id));
  
+	}
+
+	@Override
+	public void update(Factura factura) {
+		// TODO Auto-generated method stub
+		
 	}
  
 }

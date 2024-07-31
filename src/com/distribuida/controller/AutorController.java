@@ -46,7 +46,7 @@ public class AutorController {
 	{
 		if(idAutor!=null) {
 			Autor Autor = AutorDao.findOne(idAutor);
-			model.addAttribute("Autor",Autor);
+			model.addAttribute("Autor",Autor);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 		}
 		//Actualizacion
 		if(opcion==1) return "add-Autors";
@@ -65,11 +65,11 @@ public class AutorController {
 			          ) {
 		//try {
 		if(idAutor == null) {
-			Autor Autor = new Autor(0, cedula, nombre, apellido, direccion, telefono, correo);
+			Autor Autor = new Autor(0, nombre, apellido, direccion, telefono, correo, correo);
 			AutorDao.add(Autor);
 			
 			}else {
-				Autor Autor2 = new Autor(idAutor, cedula, nombre, apellido, direccion, telefono, correo);
+				Autor Autor2 = new Autor(0, nombre, apellido, direccion, telefono, correo, correo);
 				AutorDao.up(Autor2);
 			}
 	
@@ -85,4 +85,3 @@ public class AutorController {
 	}
 }
  
-}

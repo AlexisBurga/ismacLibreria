@@ -87,14 +87,18 @@ public class Factura {
 	public Cliente getCliente() {
 		return cliente;
 	}
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
+	public void setCliente(Cliente idCliente) {
+		this.cliente = idCliente;
+	}
+	public void setVersion(Integer version) {
+		// TODO Auto-generated method stub
+		
 	}
 	@Override
 	public String toString() {
 		return "Factura [idFactura=" + idFactura + ", numFactura=" + numFactura + ", fecha=" + fecha + ", totalNeto="
 				+ totalNeto + ", iva=" + iva + ", total=" + total + ", cliente=" + cliente + "]";
 	}
-
- 
+	
+	
 }

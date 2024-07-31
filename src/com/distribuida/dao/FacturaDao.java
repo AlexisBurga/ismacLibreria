@@ -13,4 +13,6 @@ public interface FacturaDao {
 	public void add(Factura factura);
 	public void up(Factura factura);
 	public void del(int id);
+
+	public void update(Factura factura);
 }
